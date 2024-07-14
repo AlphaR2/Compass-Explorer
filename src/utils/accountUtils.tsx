@@ -61,9 +61,9 @@ export const ShortenAddress: React.FC<ShortenAddressProps> = ({
     switch (addressType) {
       case "tokenaddress":
       case "by":
-        return `https://solscan.io/account/${address}`;
+        return `https://compass-explorer.vercel.app/address/${address}`;
       case "signature":
-        return `https://solscan.io/tx/${address}`;
+        return `https://compass-explorer.vercel.app/trx/${address}`;
       default:
         return "#";
     }
@@ -104,11 +104,7 @@ export const NormalAddress = ({ address }: { address: string | any }) => {
   };
   return (
     <div className="flex items-center">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        className=""
-      >
+      <a target="_blank" rel="noopener noreferrer" className="">
         {`${prefix}....${suffix}`}
       </a>
 
