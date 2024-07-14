@@ -13,11 +13,12 @@ import {
 import { programNameMapping } from "@/utils/blockchain";
 
 const endpoint: any = process.env.NEXT_PUBLIC_RPC;
-const myKey: any = process.env.NEXT_HELIUS_KEY;
+
+
 
 const connection = new Connection(endpoint);
 
-// export const useAssetData = (address: string) => {
+
 
 //   const tokenResponse = async (): Promise<AssetData> => {
 //     if (!address) return null;

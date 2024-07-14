@@ -1,3 +1,5 @@
+"use client"
+
 import {
   PublicKey,
   ConfirmedSignatureInfo,
@@ -18,8 +20,6 @@ import { Metaplex } from "@metaplex-foundation/js";
 import { ENV, TokenListProvider } from "@solana/spl-token-registry";
 
 const endpoint: any = process.env.NEXT_PUBLIC_RPC;
-const myKey: any = process.env.NEXT_HELIUS_KEY;
-const birdeye: any = process.env.NEXT_BIRDEYE_KEY;
 const connection = new Connection(endpoint);
 
 interface TransactionOptions {
@@ -404,41 +404,6 @@ export const getUserTokenDelegated = async (inputPub: string) => {
   }
 };
 
-// export const getStakeAccount = async (address: string): Promise<any | null> => {
-//   if (!address) {
-//     return null;
-//   }
-
-//   try {
-//     const response = await fetch(endpoint, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         jsonrpc: "2.0",
-//         id: 1,
-//         method: "getVoteAccounts",
-//         params: [
-//           {
-//             votePubkey: address,
-//           },
-//         ],
-//       }),
-//     });
-
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! status: ${response.status}`);
-//     }
-
-//     const { result } = await response.json();
-//     console.log("Asset:", result);
-//     return result;
-//   } catch (error) {
-//     console.error("Error getting token details:", error);
-//     return null;
-//   }
-// };
 
 export const getTransactionsOfUser = async (
   address: string,
