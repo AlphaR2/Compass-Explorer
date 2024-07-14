@@ -57,28 +57,12 @@ export const ShortenAddress: React.FC<ShortenAddressProps> = ({
       setTimeout(() => setCopied(false), 2000);
     });
   };
-  const getLink = () => {
-    switch (addressType) {
-      case "tokenaddress":
-      case "by":
-        return `https://compass-explorer.vercel.app/address/${address}`;
-      case "signature":
-        return `https://compass-explorer.vercel.app/trx/${address}`;
-      default:
-        return "#";
-    }
-  };
 
   return (
     <div className="flex items-center">
-      <a
-        href={getLink()}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline text-blue-700 "
-      >
+      <span rel="noopener noreferrer" className="">
         {`${prefix}....${suffix}`}
-      </a>
+      </span>
 
       <button title="click" onClick={handleCopy} style={{ marginLeft: "8px" }}>
         {copied ? <FaCheckCircle className="text-green-600" /> : <FaCopy />}
