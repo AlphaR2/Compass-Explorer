@@ -12,7 +12,7 @@ import {
 } from "@/utils/blockchain";
 import { programNameMapping } from "@/utils/blockchain";
 
-const endpoint: any = process.env.NEXT_PUBLIC_RPC;
+const endpoint: any = process.env.NEXT_RPC;
 
 
 

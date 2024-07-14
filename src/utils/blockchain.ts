@@ -19,7 +19,7 @@ import {
 import { Metaplex } from "@metaplex-foundation/js";
 import { ENV, TokenListProvider } from "@solana/spl-token-registry";
 
-const endpoint: any = process.env.NEXT_PUBLIC_RPC;
+const endpoint: any = process.env.NEXT_RPC;
 const connection = new Connection(endpoint);
 
 interface TransactionOptions {
