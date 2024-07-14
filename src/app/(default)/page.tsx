@@ -23,8 +23,7 @@ export default function Home() {
     error,
   } = useAssetData(address);
 
-  // const { price, blockHeight, epoch, trxCount, CurrentTps, marketCap } =
-  //   solData;
+
 
   return (
     <main className="flex flex-col">
