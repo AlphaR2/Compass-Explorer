@@ -8,7 +8,7 @@ Compass is a block explorer that leverages the RPC/API methods of Helius and Sol
 2. Check transaction hashes and retrieve corresponding data.
 
 ## Getting Started
-
+link: https://compass-explorer.vercel.app/
 You can access compass from our website and start using immediately
 
 ## DEV CORNER
